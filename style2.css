@@ -333,7 +333,7 @@
   
   .speakers {
     padding: 120px 20px;
-    text-align: center;
+    text-align: -webkit-center;
   }
   
   .speakers .section-title {
