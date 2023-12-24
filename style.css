@@ -116,12 +116,12 @@ body{
     padding: 10px;
     border:none;
     border-radius: 3px;
-    color: rgb(209, 209, 209);
-    background: rgba(63, 114, 76, 0.7);
+    color: rgb(249, 249, 249);
+    background: rgba(101, 50, 89, 0.7);
 }
 
 .form-submit-btn input:hover{
-    background: rgba(56, 204, 93, 0.7);
+    background: rgba(202, 53, 170, 0.7);
     color: rgb(255, 255, 255);
 }
 

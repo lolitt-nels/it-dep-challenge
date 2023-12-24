@@ -22,7 +22,7 @@
      * typography
      */
   
-    --ff-poppins: "Poppins", sans-sarif;
+    --ff-poppins: "Poppins", sans-serif;
   
     --fs-1: 32px;
     --fs-2: 26px;
@@ -228,6 +228,7 @@
     position: relative;
     padding: 130px 0 140px;
     z-index: 1;
+    margin-bottom: 50px;
   }
   
   .principale-content { text-align: center; }
@@ -252,14 +253,19 @@
     z-index: -1;
   }
   
+
+
+
   .about {
     position: relative;
     z-index: 1;
-    background: url("./images/about-bg.png") no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding: 120px 0;
+    background-color: rosybrown;
+    border-bottom-left-radius:50% 50px;
+    border-bottom-right-radius:50% 50px;
+    border-top-left-radius:50% 50px;
+    border-top-right-radius:50% 50px;    
     text-align: center;
+    padding: 120px 16px;
   }
 
 
@@ -324,7 +330,7 @@
   }
   
   .speakers {
-    padding: 120px 0;
+    padding: 120px 20px;
     text-align: center;
   }
   
@@ -406,12 +412,29 @@
 
   
 
-  
-
-  
-
-
-
+  .pricing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px 0px;
+  }
+  .pricing .pricing-text{
+    display: flex;
+    color: var(--rythm);
+    font-size: var(--fs-4);
+    margin-bottom: 120px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+.pricing  .section-title{color: var(--royal-blue-dark);
+    margin-bottom: 20px; 
+}
+.pricing .section-text{
+    color: var(--rythm);
+    font-size: var(--fs-4);
+    margin: 4px 20px;
+}
 
   .wrapper{
     display: grid;
@@ -553,3 +576,322 @@
         grid-template-columns: 1fr;
     } 
 }
+
+.footer{
+    background:#000;
+    padding:30px 0px;
+    font-family: 'Poppins', sans-serif;
+    text-align:center;
+    margin-top: 20px;
+    border-top-left-radius:50% 30px;
+border-top-right-radius:50% 30px;
+    }
+    
+    .footer .row{
+    width:100%;
+    margin:1% 0%;
+    padding:0.6% 0%;
+    color:gray;
+    margin-top: 34px;
+    font-size:0.8em;
+    display: inline-block;
+    }
+    
+    .footer .row a{
+    text-decoration:none;
+    color:gray;
+    transition:0.5s;
+    display: inline-block;
+    }
+    
+    .footer .row a:hover{
+    color:#fff;
+    }
+    
+    .footer .row ul{
+    width:100%;
+    
+    }
+    
+    .footer .row ul li{
+    display:inline-block;
+    margin:0px 30px;
+   
+
+    }
+    
+    .footer .row a i{
+    font-size:2em;
+    margin:0% 1%;
+    margin-right: 20px;
+    }
+    
+    @media (max-width:720px){
+    .footer{
+    text-align:left;
+    padding:5%;
+    }
+    .footer .row ul li{
+    display:block;
+    margin:10px 0px;
+    text-align:left;
+    }
+    .footer .row a i{
+    margin:0% 3%;
+    margin-right: 20px;
+    }
+    }
+    /**
+ * responsive for larger than 1024px 
+ */
+
+@media (min-width: 1024px) {
+
+    /**
+     * REUSED STYLE
+     */
+    .main {
+        max-width: 100%;
+        justify-content: center;
+    }
+    .container { 
+        max-width:fit-content;
+     }
+  
+  
+  
+    /**
+     * HEADER
+     */
+  
+    .navbar-menu-btn { display: none; }
+  
+    .navbar {
+      max-height: unset;
+      visibility: visible;
+      position: static;
+      width: auto;
+      background: none;
+      pointer-events: all;
+      overflow: visible;
+      display: flex;
+    }
+  
+    .navbar-list {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-right: 20px;
+    }
+  
+    .nav-link {
+      opacity: 1;
+      padding: 0 15px;
+    }
+  
+    .navbar .btn-primary { display: block; }
+  
+  
+  
+    /**
+     * HERO
+     */
+  
+    .principale-content { max-width: 550px; }
+  
+    .principale-banner {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 500px;
+      padding-top: 500px;
+      background: url("../images/hero-banner.png") no-repeat;
+      background-size: contain;
+    }
+  
+  
+  
+    /**
+     * ABOUT
+     */
+    
+    .about{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .about-top .section-text {
+      max-width: 650px;
+      margin-left:100px;
+    }
+  
+    .about-list { grid-template-columns: repeat(3, 1fr); }
+  
+    .about-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .about-bottom-banner {
+      margin-bottom: 0;
+      height: 330px;
+    }
+  
+    .about-bottom-content {
+      padding-inline: 0;
+      width: 50%;
+    }
+  
+  
+  
+    /**
+     * speakers
+     */
+    .speakers {
+        max-width: 100%;
+        margin:20px;
+        padding: 20px;
+    }
+    .speakers :is(.section-title, .section-text) {
+      max-width: 650px;
+      margin-inline: auto;
+    }
+  
+    .speakers-item {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+    }
+  
+    .speakers-item-banner {
+      margin-inline: 0;
+      margin-bottom: 0;
+    }
+  
+    .speakers-item-content {
+      width: 50%;
+      text-align: left;
+    }
+  
+    .speakers-item:last-child { flex-direction: row-reverse; }
+  
+  
+  
+    /**
+     * CTA
+     */
+  
+    .cta-card > * {
+      max-width: 500px;
+      margin-inline: auto;
+    }
+  
+  
+  
+    /**
+     * CONTACT
+     */
+  
+    .contact .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 50px;
+    }
+  
+    .contact-content { max-width: 400px; }
+  
+    .contact-title { text-align: left; }
+  
+    .contact-form { width: 50%; }
+  
+  
+  
+    /**
+     * FOOTER
+     
+  
+    .footer-top .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 50px;
+    }
+  
+    .footer-brand,
+    .footer-link-list:not(:last-child) { margin-bottom: 0; }
+  
+    .footer-link-box {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 50px;
+    } */
+  
+  }
+  
+  
+  
+  
+  
+  /**
+   * responsive for larger than 1200px 
+   */
+  
+  @media (min-width: 1200px) {
+  
+    /**
+     * CUSTOM PROPERTY 
+     */
+  
+    :root {
+  
+      /**
+       * typography
+       */
+  
+      --fs-2: 42px;
+  
+    }
+  
+  
+  
+    /**
+     * REUSED STYLE
+     */
+  
+    .container { max-width: 1150px; }
+  
+  
+  
+    /**
+     * HERO
+     */
+  
+    .hero-banner { right: 100px; }
+  
+  
+  
+    /**
+     * ABOUT
+     */
+  
+    .about-bottom-banner { height: 400px; }
+  
+  
+  
+    /**
+     * FEATURES
+     */
+  
+    .features .h2 { --fs-2: 42px; }
+  
+    .features :is(.section-title, .section-text) { max-width: 850px; }
+  
+  }
+    
+
+  
