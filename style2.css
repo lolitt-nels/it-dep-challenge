@@ -754,8 +754,11 @@ border-top-right-radius:50% 30px;
      */
     .speakers {
         max-width: 100%;
-        margin:20px;
+        margin:120px 20px;
         padding: 20px;
+        padding-left: 10%;
+        padding-right: 10%;
+
     }
     .speakers :is(.section-title, .section-text) {
       max-width: 650px;
