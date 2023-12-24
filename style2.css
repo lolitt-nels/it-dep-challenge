@@ -353,9 +353,10 @@
     max-width: 350px;
     margin-inline: auto;
     margin-bottom: 60px;
+   
   }
   
-  .speakers-item-banner img { width: 100%; }
+  .speakers-item-banner img { width: 100%;  border-radius: 50%; }
   
   .speakers-item .item-title {
     color: var(--royal-blue-dark);
