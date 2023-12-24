@@ -102,7 +102,7 @@
     overflow-x: hidden;
   }
 
-  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar { width: 13x; }
 
 ::-webkit-scrollbar-track { background: var(--white); }
 
@@ -657,7 +657,11 @@ border-top-right-radius:50% 30px;
         justify-content: center;
     }
     .container { 
-        max-width:fit-content;
+        max-width:100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: fit-content;
      }
   
   
@@ -666,53 +670,59 @@ border-top-right-radius:50% 30px;
      * HEADER
      */
   
-    .navbar-menu-btn { display: none; }
+
+
+  .navbar-menu-btn { display: none; }
+
+  .navbar {
+    max-height: unset;
+    visibility: visible;
+    position: static;
+    width: auto;
+    background: none;
+    pointer-events: all;
+    overflow: visible;
+    display: flex;
+  }
   
-    .navbar {
-      max-height: unset;
-      visibility: visible;
-      position: static;
-      width: auto;
-      background: none;
-      pointer-events: all;
-      overflow: visible;
-      display: flex;
-    }
+
+  .navbar-list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 20px;
+  }
+
+  .nav-link {
+    opacity: 1;
+    padding: 0 15px;
+  }
+
+  .navbar .btn-primary { display: block; }
+
+
+
+  /**
+   * HERO
+   */
+
+  .principale-content { max-width: 550px; }
+
+  .principale-banner {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 500px;
+    padding-top: 500px;
+    background: url("./images/—Pngtree—business\ style\ multimedia\ lady\ work_4708310.png") no-repeat;
+    background-size: contain;
+  }
+
+
+
   
-    .navbar-list {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-right: 20px;
-    }
-  
-    .nav-link {
-      opacity: 1;
-      padding: 0 15px;
-    }
-  
-    .navbar .btn-primary { display: block; }
-  
-  
-  
-    /**
-     * HERO
-     */
-  
-    .principale-content { max-width: 550px;
-    margin-left: 10px; }
-  
-    .principale-banner {
-      display: block;
-      position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%);
-      width: 500px;
-      padding-top: 500px;
-      background: url("../images/hero-banner.png") no-repeat;
-      background-size: contain;
-    }
   
   
   
@@ -726,6 +736,10 @@ border-top-right-radius:50% 30px;
         justify-items: center;
         padding-left: 10%;
         padding-right: 10%;
+    }
+    .about .container{
+        display: flex;
+        flex-direction: column;
     }
     .about-top .section-text {
       max-width: 650px;
@@ -762,6 +776,10 @@ border-top-right-radius:50% 30px;
         padding-left: 10%;
         padding-right: 10%;
 
+    }
+    .speakers .container{
+        display: flex;
+        flex-direction: column;
     }
     .speakers :is(.section-title, .section-text) {
       max-width: 650px;
@@ -877,7 +895,7 @@ border-top-right-radius:50% 30px;
      * HERO
      */
   
-    .hero-banner { right: 100px; }
+    .principale-banner { right: 100px; }
   
   
   
@@ -893,9 +911,9 @@ border-top-right-radius:50% 30px;
      * FEATURES
      */
   
-    .features .h2 { --fs-2: 42px; }
+    .speakers .h2 { --fs-2: 42px; }
   
-    .features :is(.section-title, .section-text) { max-width: 850px; }
+    .speakers :is(.section-title, .section-text) { max-width: 850px; }
   
   }
     
