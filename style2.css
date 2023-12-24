@@ -264,8 +264,9 @@
     border-bottom-right-radius:50% 50px;
     border-top-left-radius:50% 50px;
     border-top-right-radius:50% 50px;    
-    text-align: center;
+    text-align:-webkit-center;
     padding: 120px 16px;
+    align-items: center;
   }
 
 
@@ -282,6 +283,7 @@
     color: var(--white);
     font-size: var(--fs-4);
     margin-bottom: 60px;
+    text-align: start;
   }
   
   .about-list {
@@ -697,7 +699,8 @@ border-top-right-radius:50% 30px;
      * HERO
      */
   
-    .principale-content { max-width: 550px; }
+    .principale-content { max-width: 550px;
+    margin-left: 10px; }
   
     .principale-banner {
       display: block;
