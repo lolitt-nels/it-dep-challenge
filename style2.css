@@ -310,7 +310,9 @@
   
   .about-card .card-title { margin-bottom: 15px; }
   
-  .about-card .card-text { color: var(--davys-gray); text-align: justify; }
+  .about-card .card-text { color: var(--davys-gray); text-align: justify; word-spacing: 0px;
+   font-family: var(--fs-5);
+}
   
   .about-bottom-banner { margin-bottom: 120px; }
   
@@ -774,7 +776,6 @@ width:100%;
       padding-inline: 0;
       width: 50%;
     }
-  
   
   
     /**
